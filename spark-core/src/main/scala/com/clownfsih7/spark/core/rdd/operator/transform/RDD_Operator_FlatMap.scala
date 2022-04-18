@@ -35,7 +35,7 @@ object RDD_Operator_FlatMap {
     ))
       .flatMap {
         case list: List[_] => list
-        case data => List(data)
+        case a: Int => List(a)
       }
       .collect()
       .foreach(println)
