@@ -17,4 +17,8 @@ object EnvUtil {
   def take(): SparkContext = {
     threadLocal.get()
   }
+
+  def clear(): Unit = {
+    threadLocal.remove()
+  }
 }
