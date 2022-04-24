@@ -12,10 +12,12 @@ object Demo_Close {
   new Thread(() => {
     while (true) {
       // check from other sys, maybe redis, mysql, hdfs, zookeeper
+      Thread.sleep(5000)
       if (true) {
         if (ssc.getState() == StreamingContextState.ACTIVE) {
-          ssc.stop(true, true)
+          ssc.stop(stopSparkContext = true, stopGracefully = true)
         }
+        System.exit(0)
       }
     }
   }).start()
