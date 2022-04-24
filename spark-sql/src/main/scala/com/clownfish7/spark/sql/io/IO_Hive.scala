@@ -3,8 +3,6 @@ package com.clownfish7.spark.sql.io
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
-import java.util.Properties
-
 /**
  * classname IO_Hive
  * description TODO
